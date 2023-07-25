@@ -34,6 +34,7 @@ function Homepage() {
             {
                 characters.map(item=><CharacterCard 
                     key={item.id} character={item} />)
+                    
                 // characters.map(item=><p key={item.id}>{item.name}</p>)
             }
         </div>
