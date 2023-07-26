@@ -7,6 +7,8 @@ import './App.css'
 import Episodes from './pages/Episodes/Episodes'
 import About from './pages/About/About'
 import CharacterDetails from './pages/CharacterDetails/CharacterDetails'
+import ThemeContextProvider from './contexts/ThemeContext'
+
 
 
 
@@ -16,6 +18,7 @@ function App() {
 
   return (
     <BrowserRouter>
+    <ThemeContextProvider>
        <Header />
 
         <Routes>
@@ -28,7 +31,7 @@ function App() {
 
 
        <Footer />
-        
+       </ThemeContextProvider>
     </BrowserRouter>
   )
 }
