@@ -3,6 +3,7 @@ import "./Episodes.css"
 import axios from 'axios'
 import CharacterCard from '../../components/CharacterCard/CharacterCard'
 import { ThemeContext } from '../../contexts/ThemeContext'
+import Favorites from '../Favorites/Favorites'
 
 
 
@@ -107,6 +108,8 @@ function Episodes() {
         </div>
         <div className="character-container">
           {
+
+            
             characterList.map(item => <CharacterCard
               key={item.id} character={item} />)
           }

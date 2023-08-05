@@ -2,6 +2,7 @@ import React, {useContext} from 'react'
 import "./Header.css"
 import {Link} from 'react-router-dom'
 import { ThemeContext } from '../../contexts/ThemeContext'
+import Favorites from './../../pages/Favorites/Favorites';
 
 
 function header() {
@@ -22,13 +23,16 @@ function header() {
             <Link to="/about" style={{marginRight:"10px"}}>About</Link>
             <Link to="/episodes">Episode</Link>
         </div>
-        <button className={darkMode?"theme-button theme-button-dark":"theme-button"}  
-        onClick={()=>setDarkMode(!darkMode)}>
-          {
-            darkMode?"Light Mode" : "Dark Mode"
-          }
-          
-        </button>
+        <div>
+          <Link to='/favorites'>My Favorites</Link>
+          <button className={darkMode?"theme-button theme-button-dark":"theme-button"}  
+          onClick={()=>setDarkMode(!darkMode)}>
+            {
+              darkMode?"Light Mode" : "Dark Mode"
+            }
+            
+          </button>
+        </div>
     </div>
   )
 }

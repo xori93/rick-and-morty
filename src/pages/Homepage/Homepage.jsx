@@ -19,7 +19,7 @@ function Homepage() {
     useEffect( ()=> {
         console.log("Homepage loaded")
         // call api to get data
-        axios.get(`https:rickandmortyapi.com/api/character`)
+        axios.get(`https://rickandmortyapi.com/api/character`)
         .then(res=>{
             console.log(res.data.results)
             // I have the data what do i do with it?
